@@ -1,0 +1,256 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.infoCard, .formCard {
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.icon {
+  color: var(--primary);
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.alertBox {
+  display: flex;
+  gap: 16px;
+  background-color: var(--primary-light);
+  border: 1px solid var(--border-focus);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+}
+
+.alertIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alertBox p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.steps {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.steps code {
+  color: var(--primary);
+  background-color: var(--primary-light);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Form Styles */
+.formCard h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.statusBanner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.inputGroup input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.formActions button {
+  flex: 1;
+  min-width: 150px;
+}
+
+.credentialsBox {
+  margin-top: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-color: var(--bg-app);
+}
+
+.credentialsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.keyTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.keyTitle h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  background-color: var(--border);
+  color: var(--primary);
+}
+
+.copiedIcon {
+  color: var(--success);
+}
+
+.jsonBlock {
+  padding: 20px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  overflow-x: auto;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoCard, .formCard {
+    padding: 24px;
+  }
+  .inputRow {
+    grid-template-columns: 1fr;
+  }
+}
